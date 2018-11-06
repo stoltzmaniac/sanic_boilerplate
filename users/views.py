@@ -10,11 +10,11 @@ async def index(request):
     return json({'user_index': 'page'})
 
 
-@users.route('/json')
-async def index_json(request):
-    return json({'user_index_json': 'JSON response'})
+@users.route('/json/<word>')
+async def index_json(request, word):
+    return json({'user_index_json_response': word})
 
 
-@users.route('/text')
-async def index_text(request):
-    return text('user_index_text TEXT response')
+@users.route('/text/<word>')
+async def index_text(request, word):
+    return text('user_index_text TEXT ' + word)

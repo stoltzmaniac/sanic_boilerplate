@@ -12,14 +12,14 @@ async def index(request):
     return json({'index': 'page'})
 
 
-@app.route('/json')
-async def index_json(request):
-    return json({'index_json': 'JSON response'})
+@app.route('/json/<word>')
+async def index_json(request, word):
+    return json({'index_json_response': word})
 
 
-@app.route('/text')
-async def index_text(request):
-    return text('index_text TEXT response')
+@app.route('/text/<word>')
+async def index_text(request, word):
+    return text('index_text TEXT ' + word)
 
 
 @app.websocket('/feed')
