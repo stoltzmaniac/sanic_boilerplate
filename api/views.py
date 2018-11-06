@@ -18,3 +18,13 @@ async def index_json(request, word):
 @api.route('/text/<word>')
 async def index_text(request, word):
     return text('api_index_text TEXT' + word)
+
+
+@api.route('/get', methods=['GET'])
+async def get_handler(request):
+    return text(f'GET request - {request.args}')
+
+
+@api.route('/post', methods=['POST'])
+async def post_handler(request):
+    return text(f'POST request - {request.args}')
