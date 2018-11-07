@@ -1,5 +1,5 @@
+import pytest
 from my_app import create_app
-
 
 @pytest.yield_fixture
 def app():
