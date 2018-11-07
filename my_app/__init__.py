@@ -6,9 +6,8 @@ from my_app.users.views import users
 from my_app.main.views import main
 
 
-
 def create_app():
-    app = Sanic()
+    app = Sanic(__name__)
     app.config.from_object(Config)
 
     app.blueprint(api)
@@ -16,5 +15,3 @@ def create_app():
     app.blueprint(main)
 
     return app
-
-
