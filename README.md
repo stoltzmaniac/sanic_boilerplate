@@ -9,4 +9,4 @@ alembic init
     
 change line: `sqlalchemy.url = ...` to have your database location  
 
- alembic revision -m "baseline"
+alembic revision -m "baseline"
