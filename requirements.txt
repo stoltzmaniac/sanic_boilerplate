@@ -1,11 +1,14 @@
 aiofiles==0.4.0
 aiohttp==3.4.4
 alembic==1.0.2
+apipkg==1.5
 async-generator==1.10
 async-timeout==3.0.1
 atomicwrites==1.2.1
 attrs==18.2.0
 chardet==3.0.4
+coverage==4.5.1
+execnet==1.5.0
 httptools==0.0.11
 idna==2.7
 idna-ssl==1.1.0
@@ -20,7 +23,10 @@ psycopg2-binary==2.7.5
 py==1.7.0
 pymongo==3.7.2
 pytest==3.10.0
+pytest-cov==2.6.0
+pytest-forked==0.2
 pytest-sanic==0.1.13
+pytest-xdist==1.24.0
 python-dateutil==2.7.5
 python-editor==1.0.3
 sanic==0.8.3
