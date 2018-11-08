@@ -12,4 +12,5 @@ class User(Base):
 
     id = Column(Integer, primary_key=True)
     username = Column(String(20))
+    email = Column(String(100))
     created = Column(DateTime, default=func.now())

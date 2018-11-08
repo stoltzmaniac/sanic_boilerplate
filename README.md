@@ -7,6 +7,10 @@ pip install -r requirements.txt
 
 alembic init  
     
-change line: `sqlalchemy.url = ...` to have your database location  
+change line in alembic/env.py: `sqlalchemy.url = ...` to have your database location  
 
 alembic revision -m "baseline"
+
+add line in alembic/env.py: from my_app import models  
+
+change line in alembic/env.py: `target_metadata = ...` to have `...` =  `models.Base.metadata` 
