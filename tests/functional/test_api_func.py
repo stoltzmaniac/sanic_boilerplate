@@ -6,6 +6,7 @@ async def test_index_pages(test_cli):
     """
     resp = await test_cli.get('/')
     assert resp.status == 200
+    assert 'YAY - this is working!' in await resp.text()
 
     resp = await test_cli.get('/api')
     assert resp.status == 200
