@@ -7,7 +7,7 @@ pip install -r requirements.txt
 
 alembic init  
     
-change line in alembic/env.py: `sqlalchemy.url = ...` to have your database location  
+change line in alembic.ini: `sqlalchemy.url = ...` to have your database location  
 
 alembic revision -m "baseline"
 
@@ -20,3 +20,7 @@ Now, if you modify the models, you can use:
 `alembic revision --autogenerate -m "blah blah"`
 
 Can update with: `alembic upgrade head` 
+
+### NOTE ###  
+If you have issues with "module not found" - try setting your PYTHONPATH ...  
+`export PYTHONPATH=<path to your top level directory (above my_app)>`
