@@ -45,3 +45,19 @@ async def test_text_pages(test_cli):
 
     resp = await test_cli.get('/users/text')
     assert resp.status == 200
+
+
+async def test_404_pages(test_cli):
+    """
+    GIVEN a Sanic application
+    WHEN a missing page is requested (GET)
+    THEN check the response is 404
+    """
+    resp = await test_cli.get('/lkajfeoij2893ui23kj3lk4j')
+    assert resp.status == 404
+
+    resp = await test_cli.get('/api/lkajfeoij2893ui23kj3lk4j')
+    assert resp.status == 404
+
+    resp = await test_cli.get('/users/lkajfeoij2893ui23kj3lk4j')
+    assert resp.status == 404

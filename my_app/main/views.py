@@ -20,12 +20,6 @@ async def index(request):
     content = template.render(some_text='YAY - this is working!')
     return html(content)
 
-@main.route('/about')
-async def index(request):
-    template = env.get_template('about.html')
-    content = template.render()
-    return html(content)
-
 @main.route('/json')
 async def index_json(request):
     return json({'main_index_json': 'JSON response'})
