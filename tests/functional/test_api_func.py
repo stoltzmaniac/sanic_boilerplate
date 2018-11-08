@@ -20,6 +20,9 @@ async def test_json_pages(test_cli):
     WHEN the '/___/json' page is requested (GET)
     THEN check the response is valid
     """
+    resp = await test_cli.get('/json')
+    assert resp.status == 200
+
     resp = await test_cli.get('/api/json')
     assert resp.status == 200
 
@@ -33,6 +36,10 @@ async def test_text_pages(test_cli):
     WHEN the '/___/text' page is requested (GET)
     THEN check the response is valid
     """
+
+    resp = await test_cli.get('/text')
+    assert resp.status == 200
+
     resp = await test_cli.get('/api/text')
     assert resp.status == 200
 
