@@ -1,7 +1,7 @@
 # sanic_boilerplate
 Some basics of sanic put together for starting a project quickly
 
-#Build Status
+
 [![Build Status](https://travis-ci.org/stoltzmaniac/sanic_boilerplate.svg)](https://travis-ci.org/stoltzmaniac/sanic_boilerplate)
 [![Coverage Status](https://coveralls.io/repos/github/stoltzmaniac/sanic_boilerplate/badge.svg?branch=master)](https://coveralls.io/github/stoltzmaniac/sanic_boilerplate?branch=master)
 
