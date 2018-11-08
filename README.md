@@ -24,3 +24,5 @@ Can update with: `alembic upgrade head`
 ### NOTE ###  
 If you have issues with "module not found" - try setting your PYTHONPATH ...  
 `export PYTHONPATH=<path to your top level directory (above my_app)>`
+
+#### Travis CI is used.
