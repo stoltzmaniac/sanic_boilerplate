@@ -1,12 +1,16 @@
 from sanic import Blueprint
 from sanic.response import json, text, html
-from sanic.exceptions import NotFound, abort
+from sanic.exceptions import NotFound
 from jinja2 import Environment, PackageLoader
 
 env = Environment(loader=PackageLoader('my_app', 'templates'))
 
 main = Blueprint('main', url_prefix='/')
 
+
+@main.middleware
+async def print_on_request(request):
+    print("i am a spy")
 
 @main.exception(NotFound)
 async def four_o_four(request, exception):
