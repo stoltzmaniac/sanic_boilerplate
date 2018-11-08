@@ -6,6 +6,6 @@ env:
 install:
   pip install -r requirements.txt
 script:
-  - pytest
+  - py.test --cov=my_app tests/
 after_success:
   - coveralls

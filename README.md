@@ -23,7 +23,9 @@ Now, if you modify the models, you can use:
 
 `alembic revision --autogenerate -m "blah blah"`
 
-Can update with: `alembic upgrade head` 
+Can update with: `alembic upgrade head`
+
+Run tests with: `py.test --cov=my_app tests/` 
 
 ### NOTE ###  
 If you have issues with "module not found" - try setting your PYTHONPATH ...  
