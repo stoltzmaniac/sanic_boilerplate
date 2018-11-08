@@ -2,13 +2,13 @@ from sanic import Blueprint
 from sanic.response import json, text, html
 from jinja2 import Environment, PackageLoader
 
-env = Environment(loader=PackageLoader('my_app', 'templates'))
+env = Environment(loader=PackageLoader('my_app', 'static'))
 
 main = Blueprint('main', url_prefix='/')
 
 @main.route('/')
 async def index(request):
-    template = env.get_template('base.html')
+    template = env.get_template('index.html')
     content = template.render(some_text='YAY - this is working!')
     return html(content)
 
