@@ -2,7 +2,7 @@ from sanic import Blueprint
 from sanic.response import json, text, html
 from jinja2 import Environment, PackageLoader
 
-env = Environment(loader=PackageLoader('my_app', 'static'))
+env = Environment(loader=PackageLoader('my_app', 'templates'))
 
 main = Blueprint('main', url_prefix='/')
 
