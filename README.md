@@ -1,6 +1,10 @@
 # sanic_boilerplate
 Some basics of sanic put together for starting a project quickly
 
+#Build Status
+[![Build Status](https://travis-ci.org/stoltzmaniac/sanic_boilerplate.svg)](https://travis-ci.org/stoltzmaniac/sanic_boilerplate)
+
+
 ## To Do:  
 
 pip install -r requirements.txt  
