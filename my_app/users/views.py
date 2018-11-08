@@ -8,7 +8,7 @@ users = Blueprint('users', url_prefix='/users')
 
 @users.route('/')
 async def index(request):
-    template = env.get_template('index.html')
+    template = env.get_template('users/index.html')
     content = template.render(some_text='YAY - this is working!')
     return html(content)
 

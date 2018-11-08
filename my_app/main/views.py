@@ -8,7 +8,13 @@ main = Blueprint('main', url_prefix='/')
 
 @main.route('/')
 async def index(request):
-    template = env.get_template('index.html')
+    template = env.get_template('main/index.html')
+    content = template.render(some_text='YAY - this is working!')
+    return html(content)
+
+@main.route('/about')
+async def index(request):
+    template = env.get_template('about.html')
     content = template.render(some_text='YAY - this is working!')
     return html(content)
 
