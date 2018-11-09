@@ -7,17 +7,19 @@ Some basics of sanic put together for starting a project quickly
 
 ## To Do:  
 
-pip install -r requirements.txt  
+`pip install -r requirements.txt`  
 
-alembic init  
+`alembic init alembic`  
     
 change line in alembic.ini: `sqlalchemy.url = ...` to have your database location  
 
-alembic revision -m "baseline"
+`alembic revision -m "baseline"`
 
 add line in alembic/env.py: from my_app import models  
 
-change line in alembic/env.py: `target_metadata = ...` to have `...` =  `models.Base.metadata`
+in alembic/env.py: add `from my_app import models` and modify `target_metadata = ...` to have `...` =  `models.Base.metadata`
+
+run `alembic revision -m "baseline"`
 
 Now, if you modify the models, you can use:  
 
