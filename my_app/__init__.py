@@ -10,6 +10,8 @@ def create_app():
     app = Sanic(__name__)
     app.config.from_object(Config)
 
+    app.static('/static', './my_app/static')
+
     app.blueprint(api)
     app.blueprint(users)
     app.blueprint(main)
