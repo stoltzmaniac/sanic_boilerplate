@@ -8,10 +8,6 @@ env = Environment(loader=PackageLoader('my_app', 'templates'))
 main = Blueprint('main', url_prefix='/')
 
 
-@main.middleware
-async def print_on_request(request):
-    print("i am a spy")
-
 @main.exception(NotFound)
 async def four_o_four(request, exception):
     template = env.get_template('main/404.html')
