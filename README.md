@@ -11,7 +11,10 @@ Some basics of sanic put together for starting a project quickly
 
 `alembic init alembic`  
     
-change line in alembic.ini: `sqlalchemy.url = ...` to have your database location  
+Change paths for database location in 2 places:  
+
+  - In alembic.ini: `sqlalchemy.url = ...`  
+  - In config.py: `DATABASE_URI`    
 
 `alembic revision -m "baseline"`
 
