@@ -1,4 +1,4 @@
 
 class Config:
     DEBUG = True
-    DATABASE_URI = 'postgres://sanic:sanic@localhost:5432/sanic'
+    DATABASE_URI = 'postgres://localhost:5432/sanic'
